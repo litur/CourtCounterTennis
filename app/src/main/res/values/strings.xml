@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CourtCounter</string>
+    <string name="label_A">Player A</string>
+    <string name="label_B">Player B</string>
+    <string name="label_btn3pts">Point</string>
+    <string name="label_btnACE">ACE</string>
+    <string name="label_btnFreeTrow">Free Trow</string>
+    <string name="label_points">Points</string>
+</resources>
