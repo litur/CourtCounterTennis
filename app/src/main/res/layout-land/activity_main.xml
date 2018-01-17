@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorLight"
     tools:context="com.example.android.courtcounter.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-
 
         <!-- Layout for Team / Player A -->
         <LinearLayout
@@ -22,7 +25,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
-            android:layout_weight="3"
+            android:layout_weight="4"
             android:background="@color/colorBackground"
             android:orientation="vertical"
             >
@@ -92,18 +95,7 @@
                 android:textColor="@color/textDark"
                 android:textSize="28sp" />
 
-            <Button
-                android:id="@+id/button_3ptsA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/colorAccent"
-                android:onClick="addPointsA"
-                android:text="@string/label_btn3pts"
-                android:textColor="#000000" />
+
 
             <Button
                 android:id="@+id/button_AceA"
@@ -126,7 +118,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="8dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:background="@color/colorBackground"
             android:orientation="vertical">
 
@@ -137,18 +129,44 @@
                 android:gravity="center_horizontal"
                 android:textColor="@color/textDark" />
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="28dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
+                >
+                <Button
+                    android:id="@+id/button_3ptsA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAccent"
+                    android:onClick="addPointsA"
+                    android:text="+"
+                    android:textColor="@color/textDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
                 android:background="@color/colorBackground"
                 android:gravity="center_horizontal"
                 android:text="@string/label_points"
                 android:textColor="@color/textDark"
                 android:textSize="16sp" />
+                <Button
+                    android:id="@+id/button_3ptsB"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAccent"
+                    android:onClick="addPointsB"
+                    android:text="+"
+                    android:textColor="@color/textDark" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -207,7 +225,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:layout_weight="3"
+            android:layout_weight="4"
             android:background="@color/colorBackground"
             android:orientation="vertical">
 
@@ -278,18 +296,7 @@
                 android:textColor="@color/textDark"
                 android:textSize="28sp" />
 
-            <Button
-                android:id="@+id/button_3ptsB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/colorAccent"
-                android:onClick="addPointsB"
-                android:text="@string/label_btn3pts"
-                android:textColor="@color/textDark" />
+
 
             <Button
                 android:id="@+id/button_AceB"
@@ -307,6 +314,7 @@
 
         </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"

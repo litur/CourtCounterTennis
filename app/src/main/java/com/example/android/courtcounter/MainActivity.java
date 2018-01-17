@@ -1,5 +1,6 @@
 package com.example.android.courtcounter;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -262,6 +263,8 @@ public class MainActivity extends AppCompatActivity {
     public void add1AceA(View view) {
         Aces_A = Aces_A + 1 ;
         displayACEsTeamA (Aces_A);
+        Message = "Ace for Player A";
+        showToast(Message);
     }
 
 
@@ -346,6 +349,8 @@ public class MainActivity extends AppCompatActivity {
     public void add1AceB(View view) {
         Aces_B = Aces_B + 1 ;
         displayACEsTeamB (Aces_B);
+        Message = "Ace for Player B";
+        showToast(Message);
     }
 
     /**
