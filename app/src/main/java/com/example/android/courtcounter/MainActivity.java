@@ -396,6 +396,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Display the given Message in a toast
+     * Params: @toastMessage
      */
     public void showToast(String toastMessage) {
         Context context = getApplicationContext();

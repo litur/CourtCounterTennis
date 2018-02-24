@@ -55,60 +55,26 @@
 
                 <TextView
                     android:id="@+id/team_a_games"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
+                    style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_a_sets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
+                    style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_a_aces"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
-
+                    style="@style/smallInfoTextViewStyle"
+                    />
 
                 <Button
                     android:id="@+id/button_AceA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/colorAccent"
                     android:onClick="add1AceA"
                     android:text="@string/label_btnACE"
-                    android:textColor="@color/textDark" />
-
+                    style="@style/LargeButtonStyle"
+                    android:layout_marginBottom="12dp" />
 
             </LinearLayout>
 
@@ -267,61 +233,27 @@
 
                 <TextView
                     android:id="@+id/team_b_games"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
+                    style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_b_sets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
+                    style="@style/smallInfoTextViewStyle"/>
 
                 <TextView
                     android:id="@+id/team_b_aces"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginRight="48dp"
-                    android:layout_marginTop="4dp"
-
-                    android:background="#FFFFFF"
-                    android:gravity="center_horizontal"
                     android:text="0"
-                    android:textColor="@color/textDark"
-                    android:textSize="28sp" />
-
+                    style="@style/smallInfoTextViewStyle"
+                    />
 
                 <Button
                     android:id="@+id/button_AceB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/colorAccent"
                     android:onClick="add1AceB"
                     android:text="@string/label_btnACE"
-                    android:textColor="@color/textDark" />
-
+                    style="@style/LargeButtonStyle"
+                    android:layout_marginBottom="12dp"
+                    />
 
             </LinearLayout>
         </LinearLayout>
@@ -329,7 +261,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
         android:elevation="8dp"
