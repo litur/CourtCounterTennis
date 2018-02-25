@@ -4,6 +4,16 @@
     <string name="label_B">Player B</string>
     <string name="label_btn3pts">Point</string>
     <string name="label_btnACE">ACE</string>
-    <string name="label_btnFreeTrow">Free Trow</string>
     <string name="label_points">Points</string>
+    <string name="msg_game_won_by_A">Game won by Player A</string>
+    <string name="msg_game_won_by_B">Game won by Player B</string>
+    <string name="msg_game_set_won_by_A">Game and set won by Player A</string>
+    <string name="msg_game_set_won_by_B">Game and set won by Player B</string>
+    <string name="msg_match_won_by_B">Player B has just won the Match. Congratulations!</string>
+    <string name="msg_match_won_by_A">Player A has just won the Match. Congratulations!</string>
+    <string name="msg_reset">Reset completed</string>
+    <string name="msg_ace_for_A">Ace for Player A</string>
+    <string name="msg_ace_for_B">Ace for Player B</string>
+    <string name="ace_label">Aces</string>
+    <string name="set_label">Sets</string>
 </resources>

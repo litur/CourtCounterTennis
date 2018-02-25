@@ -10,17 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="false"
-        android:paddingBottom="100dp">
+        android:paddingBottom="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/X_large_dimen"
+           >
 
             <!-- Layout for Team / Player A -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="0dp"
@@ -49,32 +51,21 @@
                     android:background="#FFFFFF"
                     android:elevation="8dp"
                     android:gravity="center_horizontal"
-                    android:text="0"
                     android:textColor="@color/textDark"
                     android:textSize="56sp" />
 
                 <TextView
                     android:id="@+id/team_a_games"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_a_sets"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_a_aces"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle"
                     />
-
-                <Button
-                    android:id="@+id/button_AceA"
-                    android:onClick="add1AceA"
-                    android:text="@string/label_btnACE"
-                    style="@style/LargeButtonStyle"
-                    android:layout_marginBottom="12dp" />
 
             </LinearLayout>
 
@@ -87,7 +78,7 @@
             <!-- Layout for labels -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="3"
@@ -111,7 +102,6 @@
                     android:layout_marginRight="4dp"
                     android:layout_marginTop="24dp"
                     android:orientation="horizontal"
-
                     >
 
                     <Button
@@ -121,7 +111,8 @@
                         android:background="@color/colorAccent"
                         android:onClick="addPointsA"
                         android:text="+"
-                        android:textColor="@color/textDark" />
+                        android:textColor="@color/textDark"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -144,16 +135,17 @@
                         android:background="@color/colorAccent"
                         android:onClick="addPointsB"
                         android:text="+"
-                        android:textColor="@color/textDark" />
+                        android:textColor="@color/textDark"
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:background="@color/colorBackground"
                     android:gravity="center_horizontal"
                     android:text="Games"
@@ -163,29 +155,59 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:background="@color/colorBackground"
                     android:gravity="center_horizontal"
-                    android:text="Sets"
+                    android:text="@string/set_label"
                     android:textColor="@color/textDark"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="4dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/colorBackground"
-                    android:gravity="center_horizontal"
-                    android:text="Aces"
-                    android:textColor="@color/textDark"
-                    android:textSize="16sp" />
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
 
+                    <Button
+                        android:id="@+id/button_AceA"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorAccent"
+                        android:onClick="add1AceA"
+                        android:text="+"
+                        android:textColor="@color/textDark"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorBackground"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ace_label"
+                        android:textColor="@color/textDark"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/button_AceB"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorAccent"
+                        android:onClick="add1AceB"
+                        android:text="+"
+                        android:textColor="@color/textDark"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -198,7 +220,7 @@
             <!-- Layout for Team / Player B -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="8dp"
@@ -227,32 +249,20 @@
                     android:background="#FFFFFF"
                     android:elevation="8dp"
                     android:gravity="center_horizontal"
-                    android:text="0"
                     android:textColor="@color/textDark"
                     android:textSize="56sp" />
 
                 <TextView
                     android:id="@+id/team_b_games"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_b_sets"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle"/>
 
                 <TextView
                     android:id="@+id/team_b_aces"
-                    android:text="0"
                     style="@style/smallInfoTextViewStyle"
-                    />
-
-                <Button
-                    android:id="@+id/button_AceB"
-                    android:onClick="add1AceB"
-                    android:text="@string/label_btnACE"
-                    style="@style/LargeButtonStyle"
-                    android:layout_marginBottom="12dp"
                     />
 
             </LinearLayout>
@@ -284,7 +294,8 @@
             android:background="@color/colorAccent"
             android:onClick="reset"
             android:text="RESET"
-            android:textColor="@color/textDark" />
+            android:textColor="@color/textDark"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/locale_text"

@@ -37,22 +37,18 @@
             <TextView
                 android:id="@+id/team_a_score"
                 android:elevation="8dp"
-                android:text="0"
                 style="@style/largeInfoTextViewStyle" />
 
             <TextView
                 android:id="@+id/team_a_games"
-                android:text="0"
                 style="@style/smallInfoTextViewStyle" />
 
             <TextView
                 android:id="@+id/team_a_sets"
-                style="@style/smallInfoTextViewStyle"
-                android:text="0" />
+                style="@style/smallInfoTextViewStyle" />
 
             <TextView
                 android:id="@+id/team_a_aces"
-                android:text="0"
                 style="@style/smallInfoTextViewStyle"/>
 
             <Button
@@ -78,6 +74,15 @@
             android:background="@color/color100" />
 
         <!-- Layout for labels -->
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/color100" />
+
+        <!-- Layout for Team / Player B -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -103,11 +108,11 @@
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="28dp"
                 android:background="@color/colorLight"
+                android:elevation="8dp"
                 android:gravity="center_horizontal"
                 android:text="@string/label_points"
                 android:textColor="@color/textDark"
-                android:textSize="16sp"
-                android:elevation="8dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -131,7 +136,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@color/colorBackground"
                 android:gravity="center_horizontal"
-                android:text="Sets"
+                android:text="@string/set_label"
                 android:textColor="@color/textDark"
                 android:textSize="16sp" />
 
@@ -144,20 +149,12 @@
                 android:layout_marginTop="12dp"
                 android:background="@color/colorBackground"
                 android:gravity="center_horizontal"
-                android:text="Aces"
+                android:text="@string/ace_label"
                 android:textColor="@color/textDark"
                 android:textSize="16sp" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/color100" />
-
-        <!-- Layout for Team / Player B -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -181,24 +178,20 @@
             <TextView
                 android:id="@+id/team_b_score"
                 android:elevation="8dp"
-                android:text="0"
                 style="@style/largeInfoTextViewStyle"
               />
 
             <TextView
                 android:id="@+id/team_b_games"
-                android:text="0"
                 style="@style/smallInfoTextViewStyle"
                 />
 
             <TextView
                 android:id="@+id/team_b_sets"
-                android:text="0"
                 style="@style/smallInfoTextViewStyle"/>
 
             <TextView
                 android:id="@+id/team_b_aces"
-                android:text="0"
                 style="@style/smallInfoTextViewStyle"/>
 
             <Button

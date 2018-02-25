@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CourtCounter</string>
+    <string name="label_A">Giocatore A</string>
+    <string name="label_B">Giocatore B</string>
+    <string name="label_btn3pts">Punto</string>
+    <string name="label_btnACE">ACE</string>
+    <string name="label_points">Punti</string>
+    <string name="msg_game_won_by_A">Game vinto dal Giocatore A</string>
+    <string name="msg_game_won_by_B">Game vinto dal Giocatore B</string>
+    <string name="msg_game_set_won_by_A">Game e set vinti dal Giocatore A</string>
+    <string name="msg_game_set_won_by_B">Game e set vinti dal Giocatore B</string>
+    <string name="msg_match_won_by_B">Il giocatore B ha appena vinto la partita. Congratulazioni!</string>
+    <string name="msg_match_won_by_A">Il giocatore A ha appena vinto la partita. Congratulazioni!</string>
+    <string name="msg_reset">Reset completato</string>
+    <string name="msg_ace_for_A">Ace per il Giocatore A</string>
+    <string name="msg_ace_for_B">Ace per il Giocatore B</string>
+    <string name="ace_label">Ace</string>
+    <string name="set_label">Set</string>
+</resources>

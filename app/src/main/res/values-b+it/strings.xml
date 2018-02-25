@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">CourtCounter</string>
-    <string name="label_A">Giocatore A</string>
-    <string name="label_B">Giocatore B</string>
-    <string name="label_btn3pts">Punto</string>
-    <string name="label_btnACE">ACE</string>
-    <string name="label_btnFreeTrow">Tiro Libero</string>
-    <string name="label_points">Punti</string>
-</resources>
