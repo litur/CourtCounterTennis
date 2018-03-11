@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="@dimen/small_dimen"
             android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
             android:layout_weight="3"
@@ -26,18 +26,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="4dp"
-                android:text="@string/label_A"
-                android:textColor="@color/textDark"
-                />
+                style="@style/playerNameTextViewStyle"
+                android:text="@string/label_A" />
 
             <TextView
                 android:id="@+id/team_a_score"
-                android:elevation="8dp"
-                style="@style/largeInfoTextViewStyle" />
+                style="@style/largeInfoTextViewStyle"
+                android:elevation="8dp" />
 
             <TextView
                 android:id="@+id/team_a_games"
@@ -49,40 +44,27 @@
 
             <TextView
                 android:id="@+id/team_a_aces"
-                style="@style/smallInfoTextViewStyle"/>
+                style="@style/smallInfoTextViewStyle" />
 
             <Button
                 android:id="@+id/button_3ptsA"
+                style="@style/LargeButtonStyle"
                 android:onClick="addPointsA"
-                android:text="@string/label_btn3pts"
-                style="@style/LargeButtonStyle" />
+                android:text="@string/label_btn3pts" />
 
             <Button
                 android:id="@+id/button_AceA"
+                style="@style/LargeButtonStyle"
                 android:onClick="add1AceA"
-                android:text="@string/label_btnACE"
-                style="@style/LargeButtonStyle"/>
+                android:text="@string/label_btnACE" />
 
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/color100" />
+        <View style="@style/vLineStyle" />
 
         <!-- Layout for labels -->
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/color100" />
-
-        <!-- Layout for Team / Player B -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -97,64 +79,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="@dimen/small_dimen"
                 android:textColor="@color/textDark" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="28dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginLeft="@dimen/small_dimen"
+                android:layout_marginRight="@dimen/small_dimen"
                 android:layout_marginTop="28dp"
                 android:background="@color/colorLight"
                 android:elevation="8dp"
                 android:gravity="center_horizontal"
                 android:text="@string/label_points"
                 android:textColor="@color/textDark"
-                android:textSize="16sp" />
+                android:textSize="@dimen/material_text_subhead" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/labelsTextViewStyle"
                 android:layout_marginBottom="12dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorBackground"
-                android:gravity="center_horizontal"
-                android:text="Games"
-                android:textColor="@color/textDark"
-                android:textSize="16sp" />
+                android:text="@string/games_label" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/labelsTextViewStyle"
                 android:layout_marginBottom="12dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginTop="12dp"
-                android:background="@color/colorBackground"
-                android:gravity="center_horizontal"
-                android:text="@string/set_label"
-                android:textColor="@color/textDark"
-                android:textSize="16sp" />
+                android:text="@string/set_label" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/labelsTextViewStyle"
                 android:layout_marginBottom="12dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginTop="12dp"
-                android:background="@color/colorBackground"
-                android:gravity="center_horizontal"
-                android:text="@string/ace_label"
-                android:textColor="@color/textDark"
-                android:textSize="16sp" />
+                android:text="@string/ace_label" />
 
         </LinearLayout>
 
+        <View style="@style/vLineStyle" />
+
+        <!-- Layout for Team / Player B -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -168,43 +132,37 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="4dp"
-                android:text="@string/label_B"
-                android:textColor="@color/textDark" />
+                style="@style/playerNameTextViewStyle"
+                android:text="@string/label_B" />
 
             <TextView
                 android:id="@+id/team_b_score"
-                android:elevation="8dp"
                 style="@style/largeInfoTextViewStyle"
-              />
+                android:elevation="8dp" />
 
             <TextView
                 android:id="@+id/team_b_games"
-                style="@style/smallInfoTextViewStyle"
-                />
+                style="@style/smallInfoTextViewStyle" />
 
             <TextView
                 android:id="@+id/team_b_sets"
-                style="@style/smallInfoTextViewStyle"/>
+                style="@style/smallInfoTextViewStyle" />
 
             <TextView
                 android:id="@+id/team_b_aces"
-                style="@style/smallInfoTextViewStyle"/>
+                style="@style/smallInfoTextViewStyle" />
 
             <Button
                 android:id="@+id/button_3ptsB"
+                style="@style/LargeButtonStyle"
                 android:onClick="addPointsB"
-                android:text="@string/label_btn3pts"
-                style="@style/LargeButtonStyle" />
+                android:text="@string/label_btn3pts" />
 
             <Button
                 android:id="@+id/button_AceB"
+                style="@style/LargeButtonStyle"
                 android:onClick="add1AceB"
-                android:text="@string/label_btnACE"
-                style="@style/LargeButtonStyle" />
+                android:text="@string/label_btnACE" />
 
         </LinearLayout>
     </LinearLayout>
@@ -226,23 +184,30 @@
 
         <Button
             android:id="@+id/button_reset"
+            style="@style/LargeButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:background="@color/colorAccent"
             android:onClick="reset"
             android:text="RESET"
-            android:textColor="@color/textDark" />
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/locale_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="4dp"
+            android:padding="@dimen/small_dimen"
             android:textColor="@color/textDark" />
+
+        <ImageView
+            android:id="@+id/locale_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/it" />
 
     </RelativeLayout>
 </RelativeLayout>

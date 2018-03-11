@@ -17,4 +17,9 @@
     <string name="msg_ace_for_B">Ace per il Giocatore B</string>
     <string name="ace_label">Ace</string>
     <string name="set_label">Set</string>
+    <string name="msg_point_for_A">Punto per il giocatore A</string>
+    <string name="msg_point_for_B">Punto per il giocatore B</string>
+    <string name="title_end_of_match">La partita è finita</string>
+    <string name="msg_end_of_match">Fai tap sul pulsante Reset per iniziare una nuova partita</string>
+    <string name="games_label">Game</string>
 </resources>

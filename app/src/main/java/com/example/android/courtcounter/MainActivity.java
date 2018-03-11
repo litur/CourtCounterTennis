@@ -7,13 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    public static int SETS_TO_WIN = 1;
+
+    // SETS_TO_WIN is a constant which defines how many sets each player has to wint in order to win the game
+    public final static int SETS_TO_WIN = 1;
+
     int scorePlayerA = 0;
     int scorePlayerB = 0;
     int Aces_A = 0;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     int setsA = 0;
     int setsB = 0;
     boolean deuce = false;
+    boolean  matchIsEnded = false;
     int advantage = 0;
     TextView scoreViewA;
     TextView gameViewA;
@@ -92,9 +97,15 @@ public class MainActivity extends AppCompatActivity {
         setsB = savedInstanceState.getInt("setsB_ID");
         deuce = savedInstanceState.getBoolean("deuce_ID");
         advantage = savedInstanceState.getInt("advantage_ID");
+        matchIsEnded = savedInstanceState.getBoolean("matchIsEnded_ID");
 
+        if (matchIsEnded) {
+            setButtonsInvisible();
+        }
         displayForTeamA();
         displayForTeamB();
+        displayACEsTeamA(Aces_A);
+        displayACEsTeamB(Aces_B);
     }
 
     @Override
@@ -110,18 +121,40 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("setsB_ID", setsB);
         savedInstanceState.putBoolean("deuce_ID", deuce);
         savedInstanceState.putInt("advantage_ID", advantage);
+        savedInstanceState.putBoolean("matchIsEnded_ID", matchIsEnded);
+
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
 
+        // Displays a small flag image (in the ImageView locale_image) based on the phone locale settings
+        public void displayLocale() {
 
-    public void displayLocale() {
-        TextView localeView = findViewById(R.id.locale_text);
-        localeView.setText(String.valueOf(myLocale));
+        ImageView localeImage = findViewById(R.id.locale_image);
+
+        // the locale is displayed in a texTView, only in debug
+        if( BuildConfig.DEBUG ){
+            TextView localeView = findViewById(R.id.locale_text);
+            localeView.setText(String.valueOf(myLocale));
+        }
+
+        switch (myLocale) {
+            case "en_US":
+                localeImage.setImageResource(R.drawable.us);
+                break;
+            case "it_IT":
+                localeImage.setImageResource(R.drawable.it);
+                break;
+            default:
+                localeImage.setImageResource(R.drawable.england);
+                break;
+        }
+
+
     }
 
     /**
-     * Displays the current values (Score, Games, Sets, Aces) for Team/Player A.
+     * Displays the current values (Score, Games, Sets, Aces) for Team/Player B.
      */
     public void displayForTeamA() {
         if (scorePlayerA == 50) {
@@ -154,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 1 point to the score of Player A.
      */
     public void addPointsA(View view) {
-        Message = "Point for Player A";
+        Message = getResources().getString(R.string.msg_point_for_A);
         switch (scorePlayerA) {
             case 0:
                 scorePlayerA = 15;
@@ -293,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team B.
+     * Displays the current values (Score, Games, Sets) for Team/Player B
      */
     public void displayForTeamB() {
         if (scorePlayerB == 50) {
@@ -327,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
      * Adds 1 point to the score of Player B.
      */
     public void addPointsB(View view) {
-        Message = "Point for Player B";
+        Message = getResources().getString(R.string.msg_point_for_B);
         switch (scorePlayerB) {
             case 0:
                 scorePlayerB = 15;
@@ -395,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Reset (to 0) the score of both teams/players and sets as visible the buttons
+     * Resets (to 0) the score of both teams/players and sets as visible the buttons
      */
     public void reset(View view) {
         scorePlayerA = 0;
@@ -408,6 +441,7 @@ public class MainActivity extends AppCompatActivity {
         setsB = 0;
         advantage = 0;
         deuce = false;
+        matchIsEnded = false;
         myButtonAddPointA.setVisibility(View.VISIBLE);
         myButtonAddPointB.setVisibility(View.VISIBLE);
         myButtonAddAceA.setVisibility(View.VISIBLE);
@@ -425,15 +459,17 @@ public class MainActivity extends AppCompatActivity {
      */
     public int checkMatchEnd() {
         if (setsA >= SETS_TO_WIN) {
+            matchIsEnded = true;
             return 1;
         } else if (setsB >= SETS_TO_WIN) {
+            matchIsEnded = true;
             return 2;
         } else
             return 0;
     }
 
     /**
-     * Sets the buttons to add Points and Aces as not clickable
+     * Sets the buttons for add Points and Aces as invisible
      */
     public void setButtonsInvisible() {
         myButtonAddPointA.setVisibility(View.INVISIBLE);
@@ -443,7 +479,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display the given Message in a toast
+     * Displays the given Message in a toast
      * Params: @toastMessage
      */
     public void showToast(String toastMessage) {
@@ -455,15 +491,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Display an alert at the end of the match
+     * Displays an alert at the end of the match
      * It's my first attempt at implementing an alert dialog based on:
      * https://stackoverflow.com/questions/2115758/how-do-i-display-an-alert-dialog-on-android
      */
     public void showAlert() {
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setTitle("End of Match");
-        builder1.setMessage("Tap on the Reset Button to start a new match");
+        builder1.setTitle(getResources().getString(R.string.title_end_of_match));
+        builder1.setMessage(getResources().getString(R.string.msg_end_of_match));
         builder1.setCancelable(true);
 
         builder1.setPositiveButton(

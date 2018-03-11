@@ -15,9 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginBottom="@dimen/X_large_dimen"
-           >
+            android:orientation="horizontal">
 
             <!-- Layout for Team / Player A -->
             <LinearLayout
@@ -26,33 +25,20 @@
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/small_dimen"
                 android:layout_weight="4"
                 android:background="@color/colorBackground"
                 android:elevation="8dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/label_A"
-                    android:textColor="@color/textDark" />
+                    style="@style/playerNameTextViewStyle"
+                    android:text="@string/label_A" />
 
                 <TextView
                     android:id="@+id/team_a_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:elevation="8dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/textDark"
-                    android:textSize="56sp" />
+                    style="@style/largeInfoTextViewStyleLandscape"
+                    android:elevation="8dp" />
 
                 <TextView
                     android:id="@+id/team_a_games"
@@ -64,23 +50,18 @@
 
                 <TextView
                     android:id="@+id/team_a_aces"
-                    style="@style/smallInfoTextViewStyle"
-                    />
+                    style="@style/smallInfoTextViewStyle" />
 
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:background="@color/color100" />
+            <View style="@style/vLineStyle" />
 
             <!-- Layout for labels -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/small_dimen"
                 android:layout_weight="3"
                 android:background="@color/colorBackground"
                 android:elevation="8dp"
@@ -90,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
+                    android:padding="@dimen/xsmall_dimen"
                     android:textColor="@color/textDark" />
 
                 <LinearLayout
@@ -98,124 +79,82 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="@dimen/xsmall_dimen"
+                    android:layout_marginRight="@dimen/xsmall_dimen"
                     android:layout_marginTop="24dp"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/button_3ptsA"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@color/colorAccent"
+                        style="@style/plusButtonStyle"
                         android:onClick="addPointsA"
                         android:text="+"
-                        android:textColor="@color/textDark"
                         tools:ignore="HardcodedText" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorBackground"
-                        android:gravity="center_horizontal"
-                        android:paddingBottom="8dp"
+                        style="@style/labelsTextViewStyle"
+                        android:paddingBottom="@dimen/small_dimen"
                         android:paddingLeft="12dp"
                         android:paddingRight="12dp"
-                        android:paddingTop="8dp"
-                        android:text="@string/label_points"
-                        android:textColor="@color/textDark"
-                        android:textSize="16sp"
-                       />
+                        android:paddingTop="@dimen/small_dimen"
+                        android:text="@string/label_points" />
 
                     <Button
                         android:id="@+id/button_3ptsB"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@color/colorAccent"
+                        style="@style/plusButtonStyle"
                         android:onClick="addPointsB"
                         android:text="+"
-                        android:textColor="@color/textDark"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/labelsTextViewStyle"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/colorBackground"
-                    android:gravity="center_horizontal"
-                    android:text="Games"
-                    android:textColor="@color/textDark"
-                    android:textSize="16sp" />
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:text="@string/games_label" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/colorBackground"
-                    android:gravity="center_horizontal"
-                    android:text="@string/set_label"
-                    android:textColor="@color/textDark"
-                    android:textSize="16sp" />
+                    style="@style/labelsTextViewStyle"
+                    android:layout_marginBottom="@dimen/small_dimen"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:text="@string/set_label" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="@dimen/xsmall_dimen"
+                    android:layout_marginRight="@dimen/xsmall_dimen"
+                    android:layout_marginTop="@dimen/xsmall_dimen"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/button_AceA"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@color/colorAccent"
+                        style="@style/plusButtonStyle"
                         android:onClick="add1AceA"
                         android:text="+"
-                        android:textColor="@color/textDark"
                         tools:ignore="HardcodedText" />
 
                     <TextView
+                        style="@style/labelsTextViewStyle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/colorBackground"
-                        android:gravity="center_horizontal"
-                        android:text="@string/ace_label"
-                        android:textColor="@color/textDark"
-                        android:textSize="16sp" />
+                        android:layout_marginBottom="@dimen/small_dimen"
+                        android:layout_marginTop="@dimen/small_dimen"
+                        android:text="@string/ace_label" />
 
                     <Button
                         android:id="@+id/button_AceB"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@color/colorAccent"
+                        style="@style/plusButtonStyle"
                         android:onClick="add1AceB"
                         android:text="+"
-                        android:textColor="@color/textDark"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:background="@color/color100" />
+            <View style="@style/vLineStyle" />
 
             <!-- Layout for Team / Player B -->
             <LinearLayout
@@ -223,34 +162,21 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="2dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/small_dimen"
+                android:layout_marginTop="@dimen/small_dimen"
                 android:layout_weight="4"
                 android:background="@color/colorBackground"
                 android:elevation="8dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/label_B"
-                    android:textColor="@color/textDark" />
+                    style="@style/playerNameTextViewStyle"
+                    android:text="@string/label_B" />
 
                 <TextView
                     android:id="@+id/team_b_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginTop="4dp"
-                    android:background="#FFFFFF"
-                    android:elevation="8dp"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/textDark"
-                    android:textSize="56sp" />
+                    style="@style/largeInfoTextViewStyleLandscape"
+                    android:elevation="8dp" />
 
                 <TextView
                     android:id="@+id/team_b_games"
@@ -258,12 +184,11 @@
 
                 <TextView
                     android:id="@+id/team_b_sets"
-                    style="@style/smallInfoTextViewStyle"/>
+                    style="@style/smallInfoTextViewStyle" />
 
                 <TextView
                     android:id="@+id/team_b_aces"
-                    style="@style/smallInfoTextViewStyle"
-                    />
+                    style="@style/smallInfoTextViewStyle" />
 
             </LinearLayout>
         </LinearLayout>
@@ -286,15 +211,12 @@
 
         <Button
             android:id="@+id/button_reset"
+            style="@style/LargeButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="8dp"
-            android:background="@color/colorAccent"
             android:onClick="reset"
             android:text="RESET"
-            android:textColor="@color/textDark"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -302,8 +224,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="4dp"
+            android:padding="@dimen/xsmall_dimen"
             android:textColor="@color/textDark" />
+
+        <ImageView
+            android:id="@+id/locale_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/small_dimen"
+            android:scaleType="centerCrop"
+            android:src="@drawable/it" />
 
     </RelativeLayout>
 </RelativeLayout>
